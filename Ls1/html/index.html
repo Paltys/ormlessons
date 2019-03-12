@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Download</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+    <div id="frame">
+        <div id="header">
+            <h1>Test Download/Load file</h1>
+        </div>
+        <div id="data">
+            <div id="info">
+                <p><h3>Download file ABC.pdf</h3></p>
+                <p><h3>Download file ABC.mp3</h3></p>
+
+            </div>
+            <div id="action">
+                <form action="#" method="post"  name="action">
+                    <p><input type="button" id="download_pdf" value="Download" ></p>
+                    <p><input type="button" id="download_mp3" value="Download"></p>
+                </form>
+
+            </div>
+            <div id="upload">
+                <form action="#" method="post" enctype="multipart/form-data" name="action">
+                    <h3>Load file on server</h3>
+                    <input type="file" name="Load">
+                    <input type="submit" id="load" value="Load">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
