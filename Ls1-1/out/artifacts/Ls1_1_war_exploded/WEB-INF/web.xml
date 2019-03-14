@@ -16,14 +16,14 @@
             <url-pattern>/index</url-pattern>
         </servlet-mapping>
 
-        <servlet>
+        <!--<servlet>
             <servlet-name>errorPage</servlet-name>
             <jsp-file>/views/errorPage.jsp</jsp-file>
         </servlet>
         <servlet-mapping>
             <servlet-name>errorPage</servlet-name>
             <url-pattern>/errorPage</url-pattern>
-        </servlet-mapping>
+        </servlet-mapping>-->
 
         <servlet>
             <servlet-name>downloadServlet</servlet-name>
@@ -42,4 +42,8 @@
             <servlet-name>loadServlet</servlet-name>
             <url-pattern>/loadServlet</url-pattern>
         </servlet-mapping>
+
+        <error-page>
+            <location> /views/errorPage.jsp</location>
+        </error-page>
 </web-app>
