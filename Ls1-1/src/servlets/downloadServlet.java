@@ -22,7 +22,7 @@ public class downloadServlet extends HttpServlet {
         //while (key.hasMoreElements()) {
             tempKey = key.nextElement();
             System.out.println(tempKey);
-        //    System.out.println(tempKey + ": " + req.getParameter(tempKey));
+           System.out.println(tempKey + ": " + req.getParameter(tempKey));
         //}
         if (tempKey.equals("download_pdf")){
 
@@ -30,7 +30,7 @@ public class downloadServlet extends HttpServlet {
             System.out.println("relativePath = " + relativePath);
             File downloadfile = new File(relativePath);
             FileInputStream in = new FileInputStream(downloadfile);
-            ServletContext context = getServletContext();
+
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("application/pdf");
             resp.setHeader("Content-Disposition","attachment; filename="+downloadfile.getName());
@@ -49,7 +49,7 @@ public class downloadServlet extends HttpServlet {
             System.out.println("relativePath = " + relativePath);
             File downloadfile = new File(relativePath);
             FileInputStream in = new FileInputStream(downloadfile);
-            ServletContext context = getServletContext();
+
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("application/x-rar-compressed");
             resp.setHeader("Content-Disposition","attachment; filename="+downloadfile.getName());
@@ -63,9 +63,9 @@ public class downloadServlet extends HttpServlet {
             os.close();
             System.out.println("на zip");
         } else {
-           req.getRequestDispatcher("errorPage").forward(req,resp);
+              req.getRequestDispatcher("errorPage").forward(req,resp);
 
-            System.out.println("нет файла такого");
+              System.out.println("нет файла такого");
         }
     }
 }
