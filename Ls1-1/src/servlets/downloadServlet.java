@@ -17,14 +17,14 @@ import java.util.Enumeration;
 public class downloadServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Enumeration<String> key = req.getParameterNames();
-        String tempKey;
+        //Enumeration<String> key = req.getParameterNames();
+        String tempKey = req.getParameter("download");
         //while (key.hasMoreElements()) {
-            tempKey = key.nextElement();
-            System.out.println(tempKey);
-           System.out.println(tempKey + ": " + req.getParameter(tempKey));
+        //tempKey = key.nextElement();
+        //System.out.println(tempKey);
+        //System.out.println(tempKey + ": " + req.getParameter("downloaD_pdf"));
         //}
-        if (tempKey.equals("download_pdf")){
+        if (tempKey.equals("Download_pdf")){
 
             String relativePath = getServletContext().getRealPath("")+"files\\Java1.pdf";
             System.out.println("relativePath = " + relativePath);
@@ -44,7 +44,7 @@ public class downloadServlet extends HttpServlet {
             os.close();
             System.out.println("на pdf");
 
-        } else if (tempKey.equals("download_zip")){
+        } else if (tempKey.equals("Download_zip")){
             String relativePath = getServletContext().getRealPath("")+"files\\Java1.rar";
             System.out.println("relativePath = " + relativePath);
             File downloadfile = new File(relativePath);

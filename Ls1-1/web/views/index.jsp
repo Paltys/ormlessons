@@ -26,8 +26,8 @@
         </div>
         <div id="action">
             <form action="downloadServlet"   name="download">
-                <p><input type="submit" id="download_pdf" name="download_pdf" value="Download"></p>
-                <p><input type="submit" id="download_zip" name="download_zip" value="Download"></p>
+                <p><input type="submit" id="download_pdf" name="download" value="Download_pdf"></p>
+                <p><input type="submit" id="download_zip" name="download" value="Download_zip"></p>
             </form>
 
         </div>
