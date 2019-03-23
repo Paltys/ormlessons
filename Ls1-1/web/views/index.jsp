@@ -32,13 +32,12 @@
 
         </div>
         <div id="upload">
-            <form action="loadServlet"  enctype="multipart/form-data" name="load">
+            <form action="loadServlet"  enctype="multipart/form-data" name="load" method="POST">
                 <h3>Load file on server</h3>
-                <input type="file" name="Load">
-                <input type="submit" id="uploadfile" name="uploadfile" value="Load">
+                <input type="file" name="file">
+                <input type="submit" value="Load">
             </form>
         </div>
-
     </div>
 </div>
 </body>

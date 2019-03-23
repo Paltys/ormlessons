@@ -37,6 +37,10 @@
         <servlet>
             <servlet-name>loadServlet</servlet-name>
             <servlet-class>servlets.loadServlet</servlet-class>
+            <multipart-config>
+              <max-file-size>314572008</max-file-size>
+              <max-request-size>5242800080</max-request-size>
+            </multipart-config>
         </servlet>
         <servlet-mapping>
             <servlet-name>loadServlet</servlet-name>
