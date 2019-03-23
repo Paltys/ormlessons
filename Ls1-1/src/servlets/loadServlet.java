@@ -28,6 +28,7 @@ public class loadServlet extends HttpServlet {
         uploaded.close();
         fileContent.close();
         response.getWriter().print("OK "+fileName+" uploaded");
+        System.out.println("УРРРААААА");
 
         }
     }
